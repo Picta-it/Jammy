@@ -1,15 +1,19 @@
 import { connect } from 'react-redux';
-import { toggleMenu, selectMenuItem } from '../actions';
+import { toggleMenu, selectMenuItem, toggleMainLoader } from '../actions';
 import SidebarMenu from '../components/SidebarMenu';
+import { name as title } from '../../package.json';
 
 const mapStateToProps = (state) => {
-  return state.sidebarMenu;
+  return Object.assign({}, state.sidebarMenu, {
+    title: title
+  });
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onMenuClick: (id) => {
       dispatch(selectMenuItem(id));
+      dispatch(toggleMainLoader());
     },
     onToggleMenuClick: () => {
       dispatch(toggleMenu());

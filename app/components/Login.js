@@ -1,20 +1,14 @@
 import React from 'react';
 
-const Login = (_store) => (
-  <li>
-    Login Page
-  </li>
-);
+export default class CustomMenuItem extends React.Component {
+  static propTypes = {
+  };
 
-Login.propTypes = {
-};
-
-// export default LoginPage;
-
-export default (store) => ({
-  path : 'counter',
-  /*  Async getComponent is only invoked when route matches   */
-  getComponent (nextState, cb) {
-    cb(null, Login);
+  render () {
+    return (
+      <div>
+        Login
+      </div>
+    );
   }
-});
+};

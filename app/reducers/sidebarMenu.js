@@ -6,21 +6,37 @@ var initialState = {
     id:       1,
     text:     'Dashboard',
     link:     '/dashboard',
+    icon:     'dashboard',
     selected: false
   }, {
     id:       2,
-    text:     'Page 1',
-    link:     '/dashboard',
+    text:     'Utilisateurs',
+    link:     '/utilisateurs',
+    icon:     'users',
     selected: false
   }, {
     id:       3,
-    text:     'Menu 3',
-    link:     '/dashboard',
+    text:     'Abonnements',
+    link:     '/abonnements',
+    icon:     'subscriptions',
     selected: false
   }, {
     id:       4,
-    text:     'Menu 4',
-    link:     '/dashboard',
+    text:     'Services',
+    link:     '/services',
+    icon:     'services',
+    selected: false
+  }, {
+    id:       5,
+    text:     'Gestion des coûts',
+    link:     '/couts',
+    icon:     'costs',
+    selected: false
+  }, {
+    id:       6,
+    text:     'Configuration',
+    link:     '/configuration',
+    icon:     'configuration',
     selected: false
   }]
 };

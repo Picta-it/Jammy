@@ -1,7 +1,10 @@
 // We only need to import the modules necessary for initial render
-import CoreLayout from '../components/CoreLayout';
+import CoreLayout from '../containers/CoreLayout';
 // import Dashboard from '../components/Dashboard';
 import Dashboard from '../components/Dashboard';
+import Home from '../components/Home';
+import Login from '../components/Login';
+import { authenticationRouter } from './authentication';
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -9,10 +12,22 @@ import Dashboard from '../components/Dashboard';
 export const createRoutes = function (store) {
   return ({
     path        : '/',
-    component   : CoreLayout,
+    indexRoute  : { onEnter: (nextState, replace) => replace('/admin/home') },
     childRoutes : [{
-      path        : 'dashboard',
-      component   : Dashboard
+      path        : 'login',
+      component   : Login
+    }, {
+      path        : 'admin',
+      component   : CoreLayout,
+      indexRoute  : { onEnter: (nextState, replace) => replace('/admin/home') },
+      onEnter     : authenticationRouter,
+      childRoutes : [{
+        path        : 'home',
+        component   : Home
+      }, {
+        path        : 'dashboard',
+        component   : Dashboard
+      }]
     }]
   });
 };
