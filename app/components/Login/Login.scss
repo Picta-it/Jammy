@@ -1,0 +1,38 @@
+.card-container {
+  display: flex;
+  height: 100%;
+  background-image: url(https://wallpaperscraft.com/image/mountains_fog_clouds_tops_snow_ridge_landscape_from_above_60358_3840x2400.jpg);
+  background-size: cover;
+}
+
+.card {
+  margin: auto;
+  width:  400px;
+}
+
+.card-header {
+  background-color: #283593;
+}
+
+.card-header > div > span:nth-child(1) {
+  font-size:   32px !important;
+  color:       #FFF !important;
+  font-weight: 400;
+}
+
+.card-header > div > span:nth-child(2) {
+  font-size: 12px !important;
+  color:     #E8EAF6 !important;
+}
+
+.card-media {
+  margin: 0 30px;
+}
+
+.card-actions {
+  text-align: right;
+
+  span {
+    color:     #1A237E !important;
+  }
+}

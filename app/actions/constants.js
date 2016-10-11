@@ -1,3 +1,19 @@
+// Toggle main loader atop
+export const MAIN_LOADER_TOGGLE = 'MAIN_LOADER_TOGGLE';
+
+// Menu actions
 export const MENU_SELECT_ITEM = 'MENU_SELECT_ITEM';
 export const MENU_TOGGLE = 'MENU_TOGGLE';
-export const MAIN_LOADER_TOGGLE = 'MAIN_LOADER_TOGGLE';
+
+// User actions
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+
+export const LOGOUT_REQUEST = 'LOGOUT_REQUEST';
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
+
+export const USER_FETCH_DATA_REQUEST = 'USER_FETCH_DATA_REQUEST';
+export const USER_FETCH_DATA_SUCCESS = 'USER_FETCH_DATA_SUCCESS';
+export const USER_FETCH_DATA_FAILURE = 'USER_FETCH_DATA_FAILURE';

@@ -9,6 +9,7 @@ export default class TitleBar extends React.Component {
   static propTypes = {
     title:                     PropTypes.string.isRequired,
     onLeftIconButtonTouchTap:  PropTypes.func.isRequired,
+    onAvatarTouchTap:          PropTypes.func.isRequired,
     onTitleTouchTap:           PropTypes.func.isRequired
   };
 
@@ -18,7 +19,7 @@ export default class TitleBar extends React.Component {
         title={this.props.title + ' - Dashboard'}
         iconClassNameLeft='fa fa-rocket'
         onLeftIconButtonTouchTap={() => this.props.onLeftIconButtonTouchTap()}
-        onTitleTouchTap={() => this.props.onTitleTouchTap()}
+        onTitleTouchTap={() => this.props.onAvatarTouchTap()}
         iconElementRight={avatar}
       />
     );

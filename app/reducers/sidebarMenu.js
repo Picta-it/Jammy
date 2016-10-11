@@ -5,37 +5,37 @@ var initialState = {
   menus: [{
     id:       1,
     text:     'Dashboard',
-    link:     '/dashboard',
+    link:     '/admin/dashboard',
     icon:     'dashboard',
     selected: false
   }, {
     id:       2,
     text:     'Utilisateurs',
-    link:     '/utilisateurs',
+    link:     '/admin/utilisateurs',
     icon:     'users',
     selected: false
   }, {
     id:       3,
     text:     'Abonnements',
-    link:     '/abonnements',
+    link:     '/admin/abonnements',
     icon:     'subscriptions',
     selected: false
   }, {
     id:       4,
     text:     'Services',
-    link:     '/services',
+    link:     '/admin/services',
     icon:     'services',
     selected: false
   }, {
     id:       5,
     text:     'Gestion des coûts',
-    link:     '/couts',
+    link:     '/admin/couts',
     icon:     'costs',
     selected: false
   }, {
     id:       6,
     text:     'Configuration',
-    link:     '/configuration',
+    link:     '/admin/configuration',
     icon:     'configuration',
     selected: false
   }]

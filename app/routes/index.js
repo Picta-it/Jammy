@@ -3,7 +3,7 @@ import CoreLayout from '../containers/CoreLayout';
 // import Dashboard from '../components/Dashboard';
 import Dashboard from '../components/Dashboard';
 import Home from '../components/Home';
-import Login from '../components/Login';
+import Login from '../containers/Login';
 import { authenticationRouter } from './authentication';
 
 /*  Note: Instead of using JSX, we recommend using react-router

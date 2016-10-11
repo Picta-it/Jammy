@@ -1,21 +1,30 @@
-export class Authentication {
-  static isLogged (user) {
+import AuthenticationModel from '../models/AuthenticationModel';
+
+export default class Authentication {
+  static isLogged () {
     return !!localStorage.token;
   };
 
   constructor (options) {
     this.credentials = {
-      login: options.login,
+      username: options.username,
       password: options.password
     };
   }
 
   login () {
-    localStorage.token = 'pouet pouet';
+    let authentication = new AuthenticationModel(this.credentials);
+
+    return authentication.create();
   }
 
-  logout () {
-    delete localStorage.token;
+  static logout () {
+    let deferred = new Promise((resolve, reject) => {
+      delete localStorage.token;
+      resolve(undefined);
+    });
+
+    return deferred;
   }
 
   getToken () {

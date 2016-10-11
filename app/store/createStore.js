@@ -1,45 +1,44 @@
-import { /*applyMiddleware, compose, */createStore } from 'redux';
+import { applyMiddleware, compose, createStore } from 'redux';
 // import { browserHistory } from 'react-router';
 // import createLogger from 'redux-logger';
-// import thunk from 'redux-thunk';
+import thunk from 'redux-thunk';
 // import { updateLocation } from './location';
-// import { persistState } from 'redux-devtools';
-// import DevTools from '../containers/DevTools';
+import { persistState } from 'redux-devtools';
+import DevTools from '../containers/DevTools';
 import jammyApp from '../reducers';
 
 export default (initialState = {}) => {
   // ======================================================
   // Middleware Configuration
   // ======================================================
-  // const middleware = [thunk, createLogger];
+  const middleware = [thunk];
 
   // ======================================================
   // Store Enhancers
   // ======================================================
-  // const enhancers = [];
+  const enhancers = [];
 
-  // function getDebugSessionKey () {
-  //   // You can write custom logic here!
-  //   // By default we try to read the key from ?debug_session=<key> in the address bar
-  //   const matches = window.location.href.match(/[?&]debug_session=([^&#]+)\b/);
-  //   return (matches && matches.length > 0) ? matches[1] : null;
-  // }
+  function getDebugSessionKey () {
+    // You can write custom logic here!
+    // By default we try to read the key from ?debug_session=<key> in the address bar
+    const matches = window.location.href.match(/[?&]debug_session=([^&#]+)\b/);
+    return (matches && matches.length > 0) ? matches[1] : null;
+  }
 
-  // if (__DEV__) {
-  //   const devToolsExtension = window.devToolsExtension;
-  //   if (typeof devToolsExtension === 'function') {
-  //     enhancers.push(devToolsExtension());
-  //   }
-
-  //   enhancers.push(DevTools.instrument());
-  //   enhancers.push(persistState(getDebugSessionKey()));
-  // }
+  if (__DEV__) {
+    enhancers.push(DevTools.instrument());
+    enhancers.push(persistState(getDebugSessionKey()));
+  }
 
   // ======================================================
   // Store Instantiation and HMR Setup
   // ======================================================
   const store = createStore(
-    jammyApp
+    jammyApp,
+    compose(
+      applyMiddleware(...middleware),
+      DevTools.instrument()
+    )
   );
   // store.asyncReducers = {};
 

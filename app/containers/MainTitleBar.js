@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { toggleMenu } from '../actions';
+import { logout } from '../actions/login';
 import TitleBar from '../components/TitleBar';
 import { name as title } from '../../package.json';
 import { browserHistory } from 'react-router';
@@ -17,6 +18,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     onTitleTouchTap : () => {
       browserHistory.push('/');
+    },
+    onAvatarTouchTap : () => {
+      dispatch(logout());
     }
   };
 };
