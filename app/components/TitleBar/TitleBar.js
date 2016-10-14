@@ -3,7 +3,10 @@ import AppBar from 'material-ui/AppBar';
 import Avatar from 'material-ui/Avatar';
 import './TitleBar.scss';
 
-var avatar = <Avatar src='https://avatars3.githubusercontent.com/u/2240017?v=3&s=466' />;
+var avatar = <Avatar
+  src='https://avatars3.githubusercontent.com/u/2240017?v=3&s=466'
+  onTouchTap={() => this.props.onAvatarTouchTap()}
+/>;
 
 export default class TitleBar extends React.Component {
   static propTypes = {
@@ -19,7 +22,7 @@ export default class TitleBar extends React.Component {
         title={this.props.title + ' - Dashboard'}
         iconClassNameLeft='fa fa-rocket'
         onLeftIconButtonTouchTap={() => this.props.onLeftIconButtonTouchTap()}
-        onTitleTouchTap={() => this.props.onAvatarTouchTap()}
+        onTitleTouchTap={() => this.props.onTitleTouchTap()}
         iconElementRight={avatar}
       />
     );

@@ -6,4 +6,10 @@
 }
 
 .chartContainer {
+  width:  300px;
+  overflow: hidden;
+
+  > canvas {
+    width:  100%;
+  }
 }

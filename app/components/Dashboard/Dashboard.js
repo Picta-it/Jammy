@@ -13,13 +13,9 @@ const data = {
       14
     ],
     backgroundColor: [
-      '#FF6384',
-      '#4BC0C0',
-      '#FFCE56',
-      '#E7E9ED',
-      '#36A2EB'
+      'rgba(0,192,192,0.4)'
     ],
-    label: 'My dataset' // for legend
+    label: 'My dataset'
   }],
   labels: [
     'Red',
@@ -30,56 +26,30 @@ const data = {
   ]
 };
 
-var polarOptions = {
+var options = {
   'legend': {
-    'display': false
+    'display': true
   },
-  'responsive': true
+  'responsive': false
 };
-
-var RadarChart = React.createClass({
-  displayName: 'PolarExample',
-
-  render () {
-    return (
-      <div className='chartContainer'>
-        <h3 >Some title</h3>
-        <Radar width={300} height={300} data={data} options={polarOptions} />
-      </div>
-    );
-  }
-});
-
-var BarChart = React.createClass({
-  displayName: 'PolarExample',
-
-  render () {
-    return (
-      <div className='chartContainer'>
-        <h3 >Some title</h3>
-        <Bar width={300} height={300} data={data} options={polarOptions} />
-      </div>
-    );
-  }
-});
 
 var datasets = [
   {
     label: 'My First dataset',
     fill: true,
     lineTension: 0.1,
-    backgroundColor: 'rgba(75,192,192,0.4)',
-    borderColor: 'rgba(75,192,192,1)',
+    backgroundColor: 'rgba(0,192,192,0.4)',
+    borderColor: 'rgba(0,192,192,1)',
     borderCapStyle: 'butt',
     borderDash: [],
     borderDashOffset: 0.0,
     borderJoinStyle: 'miter',
-    pointBorderColor: 'rgba(75,192,192,1)',
+    pointBorderColor: 'rgba(75,0,192,1)',
     pointBackgroundColor: '#fff',
     pointBorderWidth: 1,
     pointHoverRadius: 5,
-    pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-    pointHoverBorderColor: 'rgba(220,220,220,1)',
+    pointHoverBackgroundColor: 'rgba(0,192,192,1)',
+    pointHoverBorderColor: 'rgba(220,0,0,1)',
     pointHoverBorderWidth: 2,
     pointRadius: 1,
     pointHitRadius: 10
@@ -93,7 +63,20 @@ var LineChart = React.createClass({
     return (
       <div className='chartContainer'>
         <h3 >Some title</h3>
-        <Line width={300} height={300} data={data} datasets={datasets} options={polarOptions} />
+        <Line data={data} datasets={datasets} options={options} />
+      </div>
+    );
+  }
+});
+
+var BarChart = React.createClass({
+  displayName: 'PolarExample',
+
+  render () {
+    return (
+      <div className='chartContainer'>
+        <h3 >Some title</h3>
+        <Bar data={data} datasets={datasets} options={options} />
       </div>
     );
   }
@@ -106,7 +89,7 @@ var PolarChart = React.createClass({
     return (
       <div className='chartContainer'>
         <h3 >Some title</h3>
-        <Polar width={300} height={300} data={data} options={polarOptions} />
+        <Polar data={data} datasets={datasets}   />
       </div>
     );
   }
@@ -120,10 +103,7 @@ export const Dashboard = () => (
     <Paper className='dashboardItem'>
       <PolarChart />
     </Paper>
-    <Paper className='dashboardItem'>
-      <RadarChart />
-    </Paper>
-    <Paper className='dashboardItem'>
+    <Paper className='polar dashboardItem'>
       <BarChart />
     </Paper>
   </div>

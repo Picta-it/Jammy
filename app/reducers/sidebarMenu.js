@@ -28,7 +28,7 @@ var initialState = {
     selected: false
   }, {
     id:       5,
-    text:     'Gestion des coûts',
+    text:     'Coûts',
     link:     '/admin/couts',
     icon:     'costs',
     selected: false

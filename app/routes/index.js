@@ -4,7 +4,7 @@ import CoreLayout from '../containers/CoreLayout';
 import Dashboard from '../components/Dashboard';
 import Home from '../components/Home';
 import Login from '../containers/Login';
-import { authenticationRouter } from './authentication';
+import { requireLogin } from './AuthenticationRouter';
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -12,19 +12,16 @@ import { authenticationRouter } from './authentication';
 export const createRoutes = function (store) {
   return ({
     path        : '/',
-    indexRoute  : { onEnter: (nextState, replace) => replace('/admin/home') },
+    indexRoute  : { onEnter: (nextState, replace) => replace('/admin/dashboard') },
     childRoutes : [{
       path        : 'login',
       component   : Login
     }, {
       path        : 'admin',
       component   : CoreLayout,
-      indexRoute  : { onEnter: (nextState, replace) => replace('/admin/home') },
-      onEnter     : authenticationRouter,
+      indexRoute  : { onEnter: (nextState, replace) => replace('/admin/dashboard') },
+      onEnter     : requireLogin,
       childRoutes : [{
-        path        : 'home',
-        component   : Home
-      }, {
         path        : 'dashboard',
         component   : Dashboard
       }]

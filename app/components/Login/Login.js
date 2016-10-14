@@ -22,6 +22,12 @@ class Login extends React.Component {
     this.props.onLoginClick(login, password);
   };
 
+  handleKeyPress (event) {
+    if (event.key === 'Enter') {
+      this.login();
+    }
+  }
+
   render () {
     return (
       <div className='card-container'>
@@ -35,16 +41,16 @@ class Login extends React.Component {
             <TextField
               hintText='Doctor'
               floatingLabelText='Votre pseudo'
+              onKeyPress={(event) => this.handleKeyPress(event)}
               name='login'
               ref='login'
-              errorText={this.props.error}
             /><br />
             <TextField
               hintText='Who'
               floatingLabelText='Votre mot de passe'
               type='password'
               ref='password'
-              onChange={this._handleKeyPress}
+              onKeyPress={(event) => this.handleKeyPress(event)}
               errorText={this.props.error}
             />
           </CardMedia>

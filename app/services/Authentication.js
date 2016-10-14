@@ -15,7 +15,7 @@ export default class Authentication {
   login () {
     let authentication = new AuthenticationModel(this.credentials);
 
-    return authentication.create();
+    return authentication.save();
   }
 
   static logout () {
