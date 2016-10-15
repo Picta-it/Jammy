@@ -3,7 +3,7 @@ import authentication from './authentication';
 import authorization from './authorization';
 import managementSidebarMenu from './managementSidebarMenu';
 import acheteurSidebarMenu from './acheteurSidebarMenu';
-import assureurSidebarMenu from './assureurSidebarMenu';
+import assisteurSidebarMenu from './assisteurSidebarMenu';
 import clientSidebarMenu from './clientSidebarMenu';
 import status from './status';
 import user from './user';
@@ -13,7 +13,7 @@ const jammyApp = combineReducers({
   authentication,
   managementSidebarMenu,
   acheteurSidebarMenu,
-  assureurSidebarMenu,
+  assisteurSidebarMenu,
   clientSidebarMenu,
   status,
   user

@@ -4,7 +4,7 @@ import SidebarMenu from '../components/SidebarMenu';
 import { name as title } from '../../package.json';
 
 const mapStateToProps = (state) => {
-  return Object.assign({}, state.depanneurSidebarMenu, {
+  return Object.assign({}, state.acheteurSidebarMenu, {
     title: title
   });
 };
