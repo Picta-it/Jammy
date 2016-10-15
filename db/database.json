@@ -15,7 +15,17 @@
   ],
   "beneficiaires": [
     {"id": 1, "matricule": "B245876463", "nom": "Dupond", "prenom": "Etnan"},
-    {"id": 1, "matricule": "B245525763", "nom": "Durand", "prenom": "Dufond"},
-    {"id": 1, "matricule": "B245874577", "nom": "Aller", "prenom": "Plusloin"}
+    {"id": 2, "matricule": "B245525763", "nom": "Durand", "prenom": "Dufond"},
+    {"id": 3, "matricule": "B245874577", "nom": "Aller", "prenom": "Plusloin"}
+  ],
+  "intervention_causes": [
+    { "id": 1, "desc": "Panne sur véhicule" },
+    { "id": 2, "desc": "Vol véhicule" },
+    { "id": 3, "desc": "Belle mère à la maison" }
+  ],
+  "intervention_detail_causes": [
+    { "id": 1, "desc": "Panne mécanique" },
+    { "id": 2, "desc": "Panne essence" },
+    { "id": 3, "desc": "Belle mère à la maison" }
   ]
 }
