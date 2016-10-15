@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import todo from './acheteur/todo';
-import issue from './acheteur/issue';
+import task from './acheteur/task';
 
 const acheteur = combineReducers({
   todo,
