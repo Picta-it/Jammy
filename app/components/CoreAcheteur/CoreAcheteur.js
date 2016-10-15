@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import SidebarMenu from '../../containers/DepanneurSidebarMenu';
+import SidebarMenu from '../../containers/AcheteurSidebarMenu';
 import MainTitleBar from '../../containers/MainTitleBar';
 import DevTools from '../../containers/DevTools';
-import './CoreDepanneur.scss';
+import './CoreAcheteur.scss';
 import '../../styles/core.scss';
 
 var loadBarStyle = (show) => {
@@ -13,7 +13,7 @@ var loadBarStyle = (show) => {
   };
 };
 
-export class CoreDepanneur extends React.Component {
+export class CoreAcheteur extends React.Component {
   static propTypes = {
     loading:  PropTypes.bool.isRequired
   };
@@ -31,7 +31,7 @@ export class CoreDepanneur extends React.Component {
         <Header />
 
         <div className='page'>
-          <h1>DEPANNEUR</h1>
+          <h1>ACHETEUR</h1>
           {this.props.children}
         </div>
 
@@ -42,4 +42,4 @@ export class CoreDepanneur extends React.Component {
   }
 }
 
-export default CoreDepanneur;
+export default CoreAcheteur;

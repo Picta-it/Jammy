@@ -40,9 +40,9 @@ export default class AuthenticationModel extends ActiveRecordBasisModel {
         localStorage.token = token;
 
         setTimeout(resolve, randomDelay, fakeResult);
-      } else if (this.username === 'prestataire' && this.password === 'pouet') {
+      } else if (this.username === 'acheteur' && this.password === 'pouet') {
         let fakeResult = {
-          url: '/prestataire/',
+          url: '/acheteur/',
           data: {
             token: 'pouet pouet'
           }

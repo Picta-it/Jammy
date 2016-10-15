@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import Layout from '../components/CoreDepanneur';
+import Layout from '../components/CoreAcheteur';
 
 const mapStateToProps = (state) => {
   return state.status;
 };
 
-const CoreDepanneur = connect(
+const CoreAcheteur = connect(
   mapStateToProps
 )(Layout);
 
-export default CoreDepanneur;
+export default CoreAcheteur;

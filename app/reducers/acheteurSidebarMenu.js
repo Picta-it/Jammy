@@ -5,25 +5,25 @@ var initialState = {
   menus: [{
     id:       1,
     text:     'Dashboard',
-    link:     '/prestataire/dashboard',
+    link:     '/acheteur/dashboard',
     icon:     'dashboard',
     selected: false
   }, {
     id:       2,
     text:     'Utilisateurs',
-    link:     '/prestataire/utilisateurs',
+    link:     '/acheteur/utilisateurs',
     icon:     'users',
     selected: false
   }, {
     id:       3,
     text:     'Abonnements',
-    link:     '/prestataire/abonnements',
+    link:     '/acheteur/abonnements',
     icon:     'subscriptions',
     selected: false
   }, {
     id:       4,
     text:     'Services',
-    link:     '/prestataire/services',
+    link:     '/acheteur/services',
     icon:     'services',
     selected: false
   }, {
