@@ -1,0 +1,13 @@
+ul {
+  list-style-type: none;
+}
+li {
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+li:hover{
+  background-color: #E4D9D9;
+  cursor: pointer;
+}
