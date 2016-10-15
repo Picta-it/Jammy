@@ -4,33 +4,9 @@ var initialState = {
   opened: false,
   menus: [{
     id:       1,
-    text:     'Dashboard',
-    link:     '/acheteur/dashboard',
+    text:     'Tâches à réaliser',
+    link:     '/acheteur/todo',
     icon:     'dashboard',
-    selected: false
-  }, {
-    id:       2,
-    text:     'Utilisateurs',
-    link:     '/acheteur/utilisateurs',
-    icon:     'users',
-    selected: false
-  }, {
-    id:       3,
-    text:     'Abonnements',
-    link:     '/acheteur/abonnements',
-    icon:     'subscriptions',
-    selected: false
-  }, {
-    id:       4,
-    text:     'Services',
-    link:     '/acheteur/services',
-    icon:     'services',
-    selected: false
-  }, {
-    id:       5,
-    text:     'Logout',
-    link:     '/logout',
-    icon:     'logout',
     selected: false
   }]
 };

@@ -6,11 +6,7 @@ import './AcheteurTask.scss';
 
 class AcheteurTask extends React.Component {
   static propTypes = {
-    fetching:     PropTypes.bool.isRequired,
     error:        PropTypes.string,
-    response:     React.PropTypes.shape({
-      token:        PropTypes.string
-    }).isRequired,
     onReservationClick: PropTypes.func.isRequired
   }
 
@@ -21,24 +17,34 @@ class AcheteurTask extends React.Component {
   render () {
     var self= this
     var tasks = [
-      {id:1, "type":"night", "title":"Réservation chambres", "date":"01/12/2016", "description":"Barcelone pendant 3 jours"},
-      {id:2, "type":"night", "title":"Réservation chambres", "date":"04/12/2016", "description":"Paris pendant 1 jour"},
-      {id:3, "type":"night", "title":"Réservation chambres", "date":"15/12/2016", "description":"Bordeaux pendant 5 jours"},
-      {id:4, "type":"car", "title":"Réservation voiture de location", "date":"26/12/2016", "description":"Bordeaux pendant 10 jours"}
+      {"id":1, "type":"night", "title":"Réservation chambres", "date":"01/12/2016", "description":"Barcelone pendant 3 jours"},
+      {"id":2, "type":"night", "title":"Réservation chambres", "date":"04/12/2016", "description":"Paris pendant 1 jour"},
+      {"id":3, "type":"night", "title":"Réservation chambres", "date":"15/12/2016", "description":"Bordeaux pendant 5 jours"},
+      {"id":4, "type":"car", "title":"Réservation voiture de location", "date":"26/12/2016", "description":"Bordeaux pendant 10 jours"}
       ]
     var task = tasks.filter(function(item) {
       return item.id == self.props.params.id}
     )[0]
     var buys = [
-      {"etablissement":1, "etablissementIcon":"AirBnB", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"68", "capacity":5, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":2, "etablissementIcon":"booking", "type":"night", "name":"Booking", "averagePrice":"70", "capacity":8, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"71", "capacity":4, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":3, "etablissementIcon":"guesttoguest", "type":"night", "name":"Guest To Guest", "averagePrice":"50", "capacity":3, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
       ]
-    var buyingList = buys.map(function(aBuy){
+    var buyingList = buys.map(function(aBuy, index){
       return (
-        <Card>
+        <Card key={index}>
           <CardHeader
             title={aBuy.name}
             subtitle={"Prix moyen = "+aBuy.averagePrice+" €"}
-            avatar={require("./images/"+task.type+".png")}
+            avatar={require("./icons/"+aBuy.etablissementIcon+".png")}
             actAsExpander={true}
             showExpandableButton={true}
           />
