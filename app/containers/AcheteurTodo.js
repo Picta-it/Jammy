@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
+import {browserHistory} from 'react-router';
 import Layout from '../components/AcheteurTodo';
 
 const mapStateToProps = (state) => {
@@ -9,7 +10,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onTodoClick: (id) => {
-      console.log("Todo["+id+"]")
+      browserHistory.push('/acheteur/task/'+id);
     }
   };
 };
