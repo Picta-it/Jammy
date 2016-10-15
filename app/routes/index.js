@@ -1,6 +1,6 @@
 // We only need to import the modules necessary for initial render
 import CoreManagement from '../containers/CoreManagement';
-import CoreDepanneur from '../containers/CoreDepanneur';
+import CoreAcheteur from '../containers/CoreAcheteur';
 import CoreClient from '../containers/CoreClient';
 import CoreAssureur from '../containers/CoreAssureur';
 // import Dashboard from '../components/Dashboard';
@@ -32,9 +32,9 @@ export const createRoutes = function (store) {
         component   : Dashboard
       }]
     }, {
-      path        : 'prestataire',
-      component   : CoreDepanneur,
-      indexRoute  : { onEnter: (nextState, replace) => replace('/prestataire/dashboard') },
+      path        : 'acheteur',
+      component   : CoreAcheteur,
+      indexRoute  : { onEnter: (nextState, replace) => replace('/acheteur/dashboard') },
       onEnter     : requireLogin,
       childRoutes : [{
         path        : 'dashboard',
