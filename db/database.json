@@ -1,0 +1,21 @@
+{
+  "pays": [
+    { "id": 1, "desc": "Allemagne" },
+    { "id": 2, "desc": "Espagne" },
+    { "id": 3, "desc": "France" }
+  ],
+  "villes": [
+    { "id": 1, "desc": "Paris", "pays_id": 3 },
+    { "id": 2, "desc": "Niort", "pays_id": 3 },
+    { "id": 3, "desc": "Marseille", "pays_id": 3 },
+    { "id": 4, "desc": "Madrid", "pays_id": 2 },
+    { "id": 5, "desc": "Barcelona", "pays_id": 2 },
+    { "id": 6, "desc": "Berlin", "pays_id": 1 },
+    { "id": 7, "desc": "Munich", "pays_id": 1 }
+  ],
+  "beneficiaires": [
+    {"id": 1, "matricule": "B245876463", "nom": "Dupond", "prenom": "Etnan"},
+    {"id": 1, "matricule": "B245525763", "nom": "Durand", "prenom": "Dufond"},
+    {"id": 1, "matricule": "B245874577", "nom": "Aller", "prenom": "Plusloin"}
+  ]
+}
