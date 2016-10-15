@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import Layout from '../components/CoreAssureur';
+import Layout from '../components/CoreAssisteur';
 
 const mapStateToProps = (state) => {
   return state.status;
 };
 
-const CoreAssureur = connect(
+const CoreAssisteur = connect(
   mapStateToProps
 )(Layout);
 
-export default CoreAssureur;
+export default CoreAssisteur;

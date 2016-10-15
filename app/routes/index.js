@@ -2,7 +2,7 @@
 import CoreManagement from '../containers/CoreManagement';
 import CoreDepanneur from '../containers/CoreDepanneur';
 import CoreClient from '../containers/CoreClient';
-import CoreAssureur from '../containers/CoreAssureur';
+import CoreAssisteur from '../containers/CoreAssisteur';
 // import Dashboard from '../components/Dashboard';
 import Dashboard from '../components/Dashboard';
 import Home from '../components/Home';
@@ -19,7 +19,7 @@ export const createRoutes = function (store) {
     childRoutes : [{
       path        : 'login',
       component   : Login
-    },{
+    }, {
       path        : 'logout',
       component   : Login
     }, {
@@ -50,9 +50,9 @@ export const createRoutes = function (store) {
         component   : Dashboard
       }]
     }, {
-      path        : 'assureur',
-      component   : CoreAssureur,
-      indexRoute  : { onEnter: (nextState, replace) => replace('/assureur/dashboard') },
+      path        : 'assisteur',
+      component   : CoreAssisteur,
+      indexRoute  : { onEnter: (nextState, replace) => replace('/assisteur/dashboard') },
       onEnter     : requireLogin,
       childRoutes : [{
         path        : 'dashboard',

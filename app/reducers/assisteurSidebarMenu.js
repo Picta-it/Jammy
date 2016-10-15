@@ -3,27 +3,15 @@ import { MENU_SELECT_ITEM, MENU_TOGGLE } from '../actions/constants';
 var initialState = {
   opened: false,
   menus: [{
-    id:       1,
-    text:     'Dashboard',
-    link:     '/assureur/dashboard',
-    icon:     'dashboard',
-    selected: false
-  }, {
-    id:       2,
-    text:     'Utilisateurs',
-    link:     '/assureur/utilisateurs',
-    icon:     'users',
-    selected: false
-  }, {
     id:       3,
     text:     'Abonnements',
-    link:     '/assureur/abonnements',
+    link:     '/assisteur/abonnements',
     icon:     'subscriptions',
     selected: false
   }, {
     id:       4,
     text:     'Services',
-    link:     '/assureur/services',
+    link:     '/assisteur/services',
     icon:     'services',
     selected: false
   }, {
@@ -35,7 +23,7 @@ var initialState = {
   }]
 };
 
-function assureurSidebarMenu (state = initialState, action) {
+function assisteurSidebarMenu (state = initialState, action) {
   switch (action.type) {
     case MENU_TOGGLE:
       return {
@@ -58,4 +46,4 @@ function assureurSidebarMenu (state = initialState, action) {
   }
 }
 
-export default assureurSidebarMenu;
+export default assisteurSidebarMenu;

@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import SidebarMenu from '../../containers/AssureurSidebarMenu';
+import SidebarMenu from '../../containers/AssisteurSidebarMenu';
 import MainTitleBar from '../../containers/MainTitleBar';
 import DevTools from '../../containers/DevTools';
-import './CoreAssureur.scss';
+import './CoreAssisteur.scss';
 import '../../styles/core.scss';
 
 var loadBarStyle = (show) => {
