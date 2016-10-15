@@ -5,6 +5,7 @@ import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
 import {grey400, darkBlack, lightBlack} from 'material-ui/styles/colors'
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
+import MenuIconFactory from '../../services/MenuIconFactory';
 import './AcheteurTodo.scss';
 
 
@@ -33,7 +34,7 @@ class AcheteurTodo extends React.Component {
     var todosList = todos.map(function(aTodo){
       return (<span>
         <ListItem
-          leftAvatar={<Avatar src={require("./images/"+aTodo.type+".png")} />}
+          leftAvatar={MenuIconFactory.build(aTodo.type)}
           primaryText={aTodo.title}
           secondaryText={
             <p>
@@ -50,7 +51,7 @@ class AcheteurTodo extends React.Component {
     })
     return (
       <div>
-      <h2>TODO</h2>
+      <h2 style={{ marginLeft: '20px' }}>TODO</h2>
       <List>
         {todosList}
       </List>
