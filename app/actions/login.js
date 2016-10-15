@@ -38,8 +38,6 @@ function requestLogin () {
 };
 
 function receiveLogin (options) {
-  console.log(options);
-
   browserHistory.push(options.url);
 
   return {

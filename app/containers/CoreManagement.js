@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import Layout from '../components/CoreLayout';
+import Layout from '../components/CoreManagement';
 
 const mapStateToProps = (state) => {
   return state.status;
 };
 
-const CoreLayout = connect(
+const CoreManagement = connect(
   mapStateToProps
 )(Layout);
 
-export default CoreLayout;
+export default CoreManagement;

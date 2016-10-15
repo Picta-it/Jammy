@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import SidebarMenu from '../../containers/AvailableSidebarMenu';
+import SidebarMenu from '../../containers/AssureurSidebarMenu';
 import MainTitleBar from '../../containers/MainTitleBar';
 import DevTools from '../../containers/DevTools';
 import './CoreAssureur.scss';
@@ -13,7 +13,7 @@ var loadBarStyle = (show) => {
   };
 };
 
-export class CoreAssureur extends React.Component {
+export class CoreManagement extends React.Component {
   static propTypes = {
     loading:  PropTypes.bool.isRequired
   };
@@ -31,7 +31,7 @@ export class CoreAssureur extends React.Component {
         <Header />
 
         <div className='page'>
-          <h1>ASSUREUR</h1>
+          <h1>Management</h1>
           {this.props.children}
         </div>
 
@@ -42,4 +42,4 @@ export class CoreAssureur extends React.Component {
   }
 }
 
-export default CoreAssureur;
+export default CoreManagement;

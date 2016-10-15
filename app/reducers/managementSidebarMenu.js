@@ -5,37 +5,37 @@ var initialState = {
   menus: [{
     id:       1,
     text:     'Dashboard',
-    link:     '/ami/dashboard',
+    link:     '/management/dashboard',
     icon:     'dashboard',
     selected: false
   }, {
     id:       2,
     text:     'Utilisateurs',
-    link:     '/ami/utilisateurs',
+    link:     '/management/utilisateurs',
     icon:     'users',
     selected: false
   }, {
     id:       3,
     text:     'Abonnements',
-    link:     '/ami/abonnements',
+    link:     '/management/abonnements',
     icon:     'subscriptions',
     selected: false
   }, {
     id:       4,
     text:     'Services',
-    link:     '/ami/services',
+    link:     '/management/services',
     icon:     'services',
     selected: false
   }, {
     id:       5,
     text:     'Coûts',
-    link:     '/ami/couts',
+    link:     '/management/couts',
     icon:     'costs',
     selected: false
   }, {
     id:       6,
     text:     'Configuration',
-    link:     '/ami/configuration',
+    link:     '/management/configuration',
     icon:     'configuration',
     selected: false
   }]

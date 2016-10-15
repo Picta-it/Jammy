@@ -21,6 +21,7 @@ export default class Authentication {
   static logout () {
     let deferred = new Promise((resolve, reject) => {
       delete localStorage.token;
+
       resolve(undefined);
     });
 

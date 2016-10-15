@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import SidebarMenu from '../../containers/AvailableSidebarMenu';
+import SidebarMenu from '../../containers/ClientSidebarMenu';
 import MainTitleBar from '../../containers/MainTitleBar';
 import DevTools from '../../containers/DevTools';
 import './CoreClient.scss';

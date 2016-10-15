@@ -1,5 +1,5 @@
 // We only need to import the modules necessary for initial render
-import CoreLayout from '../containers/CoreLayout';
+import CoreManagement from '../containers/CoreManagement';
 import CoreDepanneur from '../containers/CoreDepanneur';
 import CoreClient from '../containers/CoreClient';
 import CoreAssureur from '../containers/CoreAssureur';
@@ -20,18 +20,18 @@ export const createRoutes = function (store) {
       path        : 'login',
       component   : Login
     }, {
-      path        : 'ami',
-      component   : CoreLayout,
-      indexRoute  : { onEnter: (nextState, replace) => replace('/ami/dashboard') },
+      path        : 'management',
+      component   : CoreManagement,
+      indexRoute  : { onEnter: (nextState, replace) => replace('/management/dashboard') },
       onEnter     : requireLogin,
       childRoutes : [{
         path        : 'dashboard',
         component   : Dashboard
       }]
     }, {
-      path        : 'depanneur',
+      path        : 'prestataire',
       component   : CoreDepanneur,
-      indexRoute  : { onEnter: (nextState, replace) => replace('/depanneur/dashboard') },
+      indexRoute  : { onEnter: (nextState, replace) => replace('/prestataire/dashboard') },
       onEnter     : requireLogin,
       childRoutes : [{
         path        : 'dashboard',

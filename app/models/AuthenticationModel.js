@@ -12,9 +12,9 @@ export default class AuthenticationModel extends ActiveRecordBasisModel {
     let randomDelay = Math.random() * 1500;
 
     let deferred = new Promise((resolve, reject) => {
-      if (this.username === 'ami' && this.password === 'pouet') {
+      if (this.username === 'management' && this.password === 'pouet') {
         let fakeResult = {
-          url: '/ami/',
+          url: '/management/',
           data: {
             token: 'pouet pouet'
           }
@@ -26,7 +26,7 @@ export default class AuthenticationModel extends ActiveRecordBasisModel {
         localStorage.token = token;
 
         setTimeout(resolve, randomDelay, fakeResult);
-      } else if (this.username === 'client' && this.password === 'pouet') {
+      } else if (this.username === 'beneficiaire' && this.password === 'pouet') {
         let fakeResult = {
           url: '/client/',
           data: {
@@ -40,9 +40,9 @@ export default class AuthenticationModel extends ActiveRecordBasisModel {
         localStorage.token = token;
 
         setTimeout(resolve, randomDelay, fakeResult);
-      } else if (this.username === 'depanneur' && this.password === 'pouet') {
+      } else if (this.username === 'prestataire' && this.password === 'pouet') {
         let fakeResult = {
-          url: '/depanneur/',
+          url: '/prestataire/',
           data: {
             token: 'pouet pouet'
           }

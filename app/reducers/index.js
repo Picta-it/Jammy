@@ -1,14 +1,20 @@
 import { combineReducers } from 'redux';
 import authentication from './authentication';
 import authorization from './authorization';
-import sidebarMenu from './sidebarMenu';
+import managementSidebarMenu from './managementSidebarMenu';
+import depanneurSidebarMenu from './depanneurSidebarMenu';
+import assureurSidebarMenu from './assureurSidebarMenu';
+import clientSidebarMenu from './clientSidebarMenu';
 import status from './status';
 import user from './user';
 
 const jammyApp = combineReducers({
   authorization,
   authentication,
-  sidebarMenu,
+  managementSidebarMenu,
+  depanneurSidebarMenu,
+  assureurSidebarMenu,
+  clientSidebarMenu,
   status,
   user
 });
