@@ -2,6 +2,7 @@
 import CoreManagement from '../containers/CoreManagement';
 import CoreAcheteur from '../containers/CoreAcheteur';
 import AcheteurTodo from '../containers/AcheteurTodo';
+import AcheteurTask from '../containers/AcheteurTask';
 import CoreClient from '../containers/CoreClient';
 import CoreAssisteur from '../containers/CoreAssisteur';
 // import Dashboard from '../components/Dashboard';
@@ -40,6 +41,9 @@ export const createRoutes = function (store) {
       childRoutes : [{
         path        : 'todo',
         component   : AcheteurTodo
+      },{
+        path        : 'task/:id',
+        component   : AcheteurTask
       }]
     }, {
       path        : 'client',
