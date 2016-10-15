@@ -12,8 +12,55 @@ export default class AuthenticationModel extends ActiveRecordBasisModel {
     let randomDelay = Math.random() * 1500;
 
     let deferred = new Promise((resolve, reject) => {
-      if (this.username === 'john' && this.password === 'pouet') {
-        let fakeResult = { token: 'pouet pouet' };
+      if (this.username === 'ami' && this.password === 'pouet') {
+        let fakeResult = {
+          url: '/ami/',
+          data: {
+            token: 'pouet pouet'
+          }
+        };
+        let token = fakeResult.token;
+
+        this.persisted = true;
+        this.token = token;
+        localStorage.token = token;
+
+        setTimeout(resolve, randomDelay, fakeResult);
+      } else if (this.username === 'client' && this.password === 'pouet') {
+        let fakeResult = {
+          url: '/client/',
+          data: {
+            token: 'pouet pouet'
+          }
+        };
+        let token = fakeResult.token;
+
+        this.persisted = true;
+        this.token = token;
+        localStorage.token = token;
+
+        setTimeout(resolve, randomDelay, fakeResult);
+      } else if (this.username === 'depanneur' && this.password === 'pouet') {
+        let fakeResult = {
+          url: '/depanneur/',
+          data: {
+            token: 'pouet pouet'
+          }
+        };
+        let token = fakeResult.token;
+
+        this.persisted = true;
+        this.token = token;
+        localStorage.token = token;
+
+        setTimeout(resolve, randomDelay, fakeResult);
+      } else if (this.username === 'assureur' && this.password === 'pouet') {
+        let fakeResult = {
+          url: '/assureur/',
+          data: {
+            token: 'pouet pouet'
+          }
+        };
         let token = fakeResult.token;
 
         this.persisted = true;

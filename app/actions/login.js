@@ -37,12 +37,14 @@ function requestLogin () {
   };
 };
 
-function receiveLogin (data) {
-  browserHistory.push('/admin/');
+function receiveLogin (options) {
+  console.log(options);
+
+  browserHistory.push(options.url);
 
   return {
     'type': LOGIN_SUCCESS,
-    'data': data
+    'data': options.data
   };
 };
 

@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import SidebarMenu from '../../containers/AvailableSidebarMenu';
 import MainTitleBar from '../../containers/MainTitleBar';
 import DevTools from '../../containers/DevTools';
-import './CoreLayout.scss';
+import './CoreClient.scss';
 import '../../styles/core.scss';
 
 var loadBarStyle = (show) => {
@@ -13,7 +13,7 @@ var loadBarStyle = (show) => {
   };
 };
 
-export class CoreLayout extends React.Component {
+export class CoreClient extends React.Component {
   static propTypes = {
     loading:  PropTypes.bool.isRequired
   };
@@ -31,7 +31,7 @@ export class CoreLayout extends React.Component {
         <Header />
 
         <div className='page'>
-          <h1>AMI</h1>
+          <h1>CLIENT</h1>
           {this.props.children}
         </div>
 
@@ -42,4 +42,4 @@ export class CoreLayout extends React.Component {
   }
 }
 
-export default CoreLayout;
+export default CoreClient;

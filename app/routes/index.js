@@ -1,5 +1,8 @@
 // We only need to import the modules necessary for initial render
 import CoreLayout from '../containers/CoreLayout';
+import CoreDepanneur from '../containers/CoreDepanneur';
+import CoreClient from '../containers/CoreClient';
+import CoreAssureur from '../containers/CoreAssureur';
 // import Dashboard from '../components/Dashboard';
 import Dashboard from '../components/Dashboard';
 import Home from '../components/Home';
@@ -12,14 +15,41 @@ import { requireLogin } from './AuthenticationRouter';
 export const createRoutes = function (store) {
   return ({
     path        : '/',
-    indexRoute  : { onEnter: (nextState, replace) => replace('/admin/dashboard') },
+    indexRoute  : { onEnter: (nextState, replace) => replace('/login') },
     childRoutes : [{
       path        : 'login',
       component   : Login
     }, {
-      path        : 'admin',
+      path        : 'ami',
       component   : CoreLayout,
-      indexRoute  : { onEnter: (nextState, replace) => replace('/admin/dashboard') },
+      indexRoute  : { onEnter: (nextState, replace) => replace('/ami/dashboard') },
+      onEnter     : requireLogin,
+      childRoutes : [{
+        path        : 'dashboard',
+        component   : Dashboard
+      }]
+    }, {
+      path        : 'depanneur',
+      component   : CoreDepanneur,
+      indexRoute  : { onEnter: (nextState, replace) => replace('/depanneur/dashboard') },
+      onEnter     : requireLogin,
+      childRoutes : [{
+        path        : 'dashboard',
+        component   : Dashboard
+      }]
+    }, {
+      path        : 'client',
+      component   : CoreClient,
+      indexRoute  : { onEnter: (nextState, replace) => replace('/client/dashboard') },
+      onEnter     : requireLogin,
+      childRoutes : [{
+        path        : 'dashboard',
+        component   : Dashboard
+      }]
+    }, {
+      path        : 'assureur',
+      component   : CoreAssureur,
+      indexRoute  : { onEnter: (nextState, replace) => replace('/assureur/dashboard') },
       onEnter     : requireLogin,
       childRoutes : [{
         path        : 'dashboard',
