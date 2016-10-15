@@ -26,7 +26,7 @@ export default class SidebarMenu extends React.Component {
     return (
       <div>
         <Drawer
-          docked={true}
+          docked={false}
           width={200}
           open={this.props.opened}
           onRequestChange={() => this.props.onToggleMenuClick()}
