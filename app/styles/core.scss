@@ -19,3 +19,73 @@ body {
 *:after {
   box-sizing: inherit;
 }
+
+h1, h2, h3, h4, h5 {
+  display: block;
+}
+
+h1 {
+  color: #303030;
+}
+
+h2 {
+  color: #202020;
+}
+
+h3 {
+  color: #070707;
+}
+
+.issue-field {
+  line-height: 60px;
+}
+
+.issue-field.third {
+  margin: 0 1%;
+  width: 31% !important;
+  overflow: hidden;
+  display: inline-bl  ock;
+}
+
+.issue-field.half {
+  margin: 0 1%;
+  width: 48% !important;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.issue-field.full {
+  margin: 0 1%;
+  width: 98% !important;
+  overflow: hidden;
+  display: inline-bl  ock;
+}
+
+.column-container {
+  display: flex;
+  padding: 10px 20px;
+}
+
+.left-column {
+  float: left;
+  width: 49%;
+  margin-right: 1%;
+  display: inline-block;
+}
+
+.right-column {
+  float: right;
+  width: 49%;
+  margin-left: 1%;
+  display: inline-block;
+}
+
+h3.separator {
+  font-weight: 400;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.footer, .header {
+  width: 100%;
+}

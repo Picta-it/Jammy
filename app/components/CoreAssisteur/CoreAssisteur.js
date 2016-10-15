@@ -3,7 +3,6 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import SidebarMenu from '../../containers/AssisteurSidebarMenu';
 import MainTitleBar from '../../containers/MainTitleBar';
-import DevTools from '../../containers/DevTools';
 import './CoreAssisteur.scss';
 import '../../styles/core.scss';
 
@@ -30,13 +29,11 @@ export class CoreManagement extends React.Component {
         <SidebarMenu />
         <Header />
 
-        <div className='page'>
-          <h1>Management</h1>
+        <div className='page main-page' style={{margin: 0}}>
           {this.props.children}
         </div>
 
         <Footer />
-        <DevTools />
       </div>
     );
   }

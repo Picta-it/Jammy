@@ -3,8 +3,7 @@ import { IndexLink, Link } from 'react-router';
 import './Header.scss';
 
 export const Header = () => (
-  <div>
-    <h1>Header</h1>
+  <div className='header'>
   </div>
 );
 

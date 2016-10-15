@@ -5,6 +5,7 @@ import managementSidebarMenu from './managementSidebarMenu';
 import acheteurSidebarMenu from './acheteurSidebarMenu';
 import assisteurSidebarMenu from './assisteurSidebarMenu';
 import clientSidebarMenu from './clientSidebarMenu';
+import assisteur from './assisteur';
 import status from './status';
 import user from './user';
 
@@ -16,6 +17,7 @@ const jammyApp = combineReducers({
   assisteurSidebarMenu,
   clientSidebarMenu,
   status,
+  assisteur,
   user
 });
 

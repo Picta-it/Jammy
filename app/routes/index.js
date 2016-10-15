@@ -5,7 +5,7 @@ import CoreClient from '../containers/CoreClient';
 import CoreAssisteur from '../containers/CoreAssisteur';
 // import Dashboard from '../components/Dashboard';
 import Dashboard from '../components/Dashboard';
-import Home from '../components/Home';
+import AssisteurIssue from '../containers/AssisteurIssue';
 import Login from '../containers/Login';
 import { requireLogin } from './AuthenticationRouter';
 
@@ -52,11 +52,11 @@ export const createRoutes = function (store) {
     }, {
       path        : 'assisteur',
       component   : CoreAssisteur,
-      indexRoute  : { onEnter: (nextState, replace) => replace('/assisteur/dashboard') },
+      indexRoute  : { onEnter: (nextState, replace) => replace('/assisteur/issue') },
       onEnter     : requireLogin,
       childRoutes : [{
-        path        : 'dashboard',
-        component   : Dashboard
+        path        : 'issue',
+        component   : AssisteurIssue
       }]
     }]
   });

@@ -61,6 +61,7 @@ export default class AuthenticationModel extends ActiveRecordBasisModel {
             token: 'pouet pouet'
           }
         };
+        console.log(fakeResult);
         let token = fakeResult.token;
 
         this.persisted = true;

@@ -3,19 +3,13 @@ import { MENU_SELECT_ITEM, MENU_TOGGLE } from '../actions/constants';
 var initialState = {
   opened: false,
   menus: [{
-    id:       3,
-    text:     'Abonnements',
-    link:     '/assisteur/abonnements',
-    icon:     'subscriptions',
+    id:       1,
+    text:     'Incidents',
+    link:     '/assisteur/issue',
+    icon:     'issue',
     selected: false
   }, {
-    id:       4,
-    text:     'Services',
-    link:     '/assisteur/services',
-    icon:     'services',
-    selected: false
-  }, {
-    id:       5,
+    id:       2,
     text:     'Logout',
     link:     '/logout',
     icon:     'logout',
