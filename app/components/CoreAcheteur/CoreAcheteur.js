@@ -31,7 +31,6 @@ export class CoreAcheteur extends React.Component {
         <Header />
 
         <div className='page'>
-          <h1>ACHETEUR</h1>
           {this.props.children}
         </div>
 
