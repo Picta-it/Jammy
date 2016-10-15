@@ -26,6 +26,12 @@ var initialState = {
     link:     '/prestataire/services',
     icon:     'services',
     selected: false
+  }, {
+    id:       5,
+    text:     'Logout',
+    link:     '/logout',
+    icon:     'logout',
+    selected: false
   }]
 };
 

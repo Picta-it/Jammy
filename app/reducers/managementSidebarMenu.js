@@ -38,6 +38,12 @@ var initialState = {
     link:     '/management/configuration',
     icon:     'configuration',
     selected: false
+  }, {
+    id:       7,
+    text:     'Logout',
+    link:     '/logout',
+    icon:     'logout',
+    selected: false
   }]
 };
 

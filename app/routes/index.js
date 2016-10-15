@@ -19,6 +19,9 @@ export const createRoutes = function (store) {
     childRoutes : [{
       path        : 'login',
       component   : Login
+    },{
+      path        : 'logout',
+      component   : Login
     }, {
       path        : 'management',
       component   : CoreManagement,
