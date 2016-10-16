@@ -20,8 +20,8 @@ export default class AssisteurIssueFirst extends React.Component {
   render () {
     return (
       <Paper className='page' style={{ marginLeft: '10px' }}>
-        <div className='column-container'>
-          <Paper className='page left-column' style={{ paddingLeft: '10px' }}>
+        <div className='column-container' style={{display: 'flex'}}>
+          <Paper className='page left-column' style={{ paddingLeft: '10px', float: 'none' }}>
             <h3 className='separator'>Appelant</h3>
             <Divider />
             <TextField
@@ -80,8 +80,6 @@ export default class AssisteurIssueFirst extends React.Component {
               <MenuItem label='Formule' primaryText='...' />
               <MenuItem label='Formule' primaryText='Garantie constructeur' />
             </SelectField>
-          </Paper>
-          <Paper className='page right-column' style={{ paddingLeft: '10px' }}>
             <h3 className='separator'>Client d'IMA - Nature d'assistance</h3>
             <Divider />
             <SelectField
@@ -96,6 +94,8 @@ export default class AssisteurIssueFirst extends React.Component {
               <MenuItem label='Nature Assurance' primaryText='...' />
               <MenuItem label='Nature Assurance' primaryText='Garantie constructeur' />
             </SelectField>
+          </Paper>
+          <Paper className='page right-column' style={{ paddingLeft: '10px', float: 'none' }}>
             <h3 className='separator'>Cause d'intervention</h3>
             <Divider />
             <SelectField

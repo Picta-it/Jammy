@@ -4,7 +4,7 @@ import {browserHistory} from 'react-router';
 import Layout from '../components/AcheteurTodo';
 
 const mapStateToProps = (state) => {
-  return state.status;
+  return state.acheteur.todo;
 };
 
 const mapDispatchToProps = (dispatch) => {

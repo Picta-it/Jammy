@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Layout from '../components/AcheteurTask';
 
 const mapStateToProps = (state) => {
-  return state.status;
+  return state.acheteur.task;
 };
 
 const mapDispatchToProps = (dispatch) => {
