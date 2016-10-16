@@ -1,6 +1,6 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
-import { Polar, Bar, Radar, Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import './Dashboard.scss';
 
 const data = {
@@ -29,6 +29,9 @@ const data = {
 var options = {
   'legend': {
     'display': true
+  },
+  'title': {
+    'display': false
   },
   'responsive': false
 };
@@ -69,43 +72,24 @@ var LineChart = React.createClass({
   }
 });
 
-var BarChart = React.createClass({
-  displayName: 'PolarExample',
-
-  render () {
-    return (
-      <div className='chartContainer'>
-        <h3 >Some title</h3>
-        <Bar data={data} datasets={datasets} options={options} />
-      </div>
-    );
-  }
-});
-
-var PolarChart = React.createClass({
-  displayName: 'PolarExample',
-
-  render () {
-    return (
-      <div className='chartContainer'>
-        <h3 >Some title</h3>
-        <Polar data={data} datasets={datasets}   />
-      </div>
-    );
-  }
-});
-
 export const Dashboard = () => (
-  <div>
-    <Paper className='dashboardItem'>
-      <LineChart />
-    </Paper>
-    <Paper className='dashboardItem'>
-      <PolarChart />
-    </Paper>
-    <Paper className='polar dashboardItem'>
-      <BarChart />
-    </Paper>
+  <div className='dashboard-container'>
+    <div className='left-column'>
+      <Paper className='dashboard-item-1'>
+        <LineChart />
+      </Paper>
+      <Paper className='dashboard-item-2'>
+        test
+      </Paper>
+    </div>
+    <div className='right-column'>
+      <Paper className='dashboard-item-3'>
+        test
+      </Paper>
+      <Paper className='dashboard-item-4'>
+        test
+      </Paper>
+    </div>
   </div>
 );
 

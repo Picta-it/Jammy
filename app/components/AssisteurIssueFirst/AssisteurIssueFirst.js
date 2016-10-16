@@ -5,6 +5,7 @@ import Divider from 'material-ui/Divider';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import Paper from 'material-ui/Paper';
+import AppBar from 'material-ui/AppBar';
 import MenuItem from 'material-ui/MenuItem';
 
 export default class AssisteurIssueFirst extends React.Component {
@@ -20,6 +21,7 @@ export default class AssisteurIssueFirst extends React.Component {
   render () {
     return (
       <Paper className='page' style={{ marginLeft: '10px' }}>
+        <AppBar title="Saisie incident"/>
         <div className='column-container'>
           <Paper className='page left-column' style={{ paddingLeft: '10px' }}>
             <h3 className='separator'>Appelant</h3>

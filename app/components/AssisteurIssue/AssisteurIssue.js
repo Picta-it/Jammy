@@ -7,8 +7,8 @@ import {
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import AssisteurIssueFirst from '../AssisteurIssueFirst';
-import AssitantIssueLogements from '../AssitantIssueLogements';
-import AssitantIssueDeplacement from '../AssitantIssueDeplacement';
+import AssisteurIssueSecond from '../../containers/AssisteurIssueSecond';
+import AssisteurIssueThird from '../../containers/AssisteurIssueThird';
 
 export default class AssisteurIssue extends React.Component {
 
@@ -41,9 +41,9 @@ export default class AssisteurIssue extends React.Component {
       case 0:
         return <AssisteurIssueFirst />;
       case 1:
-        return <AssitantIssueLogements />;
+        return <AssisteurIssueSecond />;
       case 2:
-        return <AssitantIssueDeplacement />;
+        return <AssisteurIssueThird />;
       default:
         return 'You\'re a long way from home sonny jim!';
     }

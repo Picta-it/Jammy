@@ -2,16 +2,19 @@ import React, { PropTypes } from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import Badge from 'material-ui/Badge';
-import './AssitantIssueDeplacement.scss';
+import Paper from 'material-ui/Paper';
+import AppBar from 'material-ui/AppBar';
+import './AssisteurIssueThird.scss';
 
-
-class AssitantIssueDeplacement extends React.Component {
+export default class AssisteurIssueThird extends React.Component {
   static propTypes = {
-    error:        PropTypes.string,
-  }
-
-  reservation (id) {
   };
+
+  handleKeyPress (event) {
+    if (event.key === 'Enter') {
+      this.onValidation({});
+    }
+  }
 
   render () {
     var self= this
@@ -51,12 +54,10 @@ class AssitantIssueDeplacement extends React.Component {
       )
     })
     return (
-      <div>
-        <h2>Disponibilités des modes de déplacement :</h2>
+      <Paper className='page' style={{ marginLeft: '10px' }}>
+        <AppBar title="Disponibilités des modes de déplacement" />
         {buyingList}
-      </div>
+      </Paper>
     );
   }
 }
-
-export default AssitantIssueDeplacement;
