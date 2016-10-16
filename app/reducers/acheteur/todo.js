@@ -1,7 +1,12 @@
 var initialState = {
   fetching: false,
   response: {
-    // todo data
+    todos: [
+      { id:1, 'type':'night', 'title':'Réservation chambres', 'date':'01/12/2016', 'description':'Barcelone pendant 3 jours' },
+      { id:2, 'type':'night', 'title':'Réservation chambres', 'date':'04/12/2016', 'description':'Paris pendant 1 jour' },
+      { id:3, 'type':'night', 'title':'Réservation chambres', 'date':'15/12/2016', 'description':'Bordeaux pendant 5 jours' },
+      { id:4, 'type':'car', 'title':'Réservation voiture de location', 'date':'26/12/2016', 'description':'Bordeaux pendant 10 jours' }
+    ]
   },
   error: undefined
 };
