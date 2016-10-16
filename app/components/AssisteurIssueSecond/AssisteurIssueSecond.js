@@ -43,7 +43,7 @@ export default class AssisteurIssueSecond extends React.Component {
             <Card className={aBuy.style}>
               <CardHeader
                 title={aBuy.name}
-                subtitle={"Prix moyen = "+aBuy.averagePrice+" €"}
+                subtitle={"Capacité : "+aBuy.capacity+". Prix moyen = "+aBuy.averagePrice+" €."}
                 actAsExpander={true}
                 expandable={false}
                 showExpandableButton={false}>
@@ -51,12 +51,7 @@ export default class AssisteurIssueSecond extends React.Component {
               </CardHeader>
               <CardActions>
                 <FlatButton label="Réserver" />
-                <FlatButton label="Plus d'infos" />
               </CardActions>
-              <CardText expandable={true}>
-                Capacité : {aBuy.capacity}
-                <p>{aBuy.description}</p>
-              </CardText>
             </Card>
           </Badge>
         )
