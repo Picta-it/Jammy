@@ -213,11 +213,11 @@ export const Dashboard = () => (
         <ReactHighcharts config={availabilityConfig} />
       </Paper>
     </div>
-    <div style={{ width: '100%', display: 'block' }}>
+    <div style={{ display: 'block' }} className='left-column'>
       <Paper className='dashboard-item-1' style={{ width: '98%', height: '440px', 'backgroundImage': 'url(https://cloud.githubusercontent.com/assets/2240017/19415322/274cbc82-936d-11e6-88f2-e2b173bd7bd8.png)', 'backgroundSize': 'cover' }}>
       </Paper>
     </div>
-    <div style={{ width: '100%', display: 'block' }}>
+    <div style={{ display: 'block' }} className='right-column'>
       <Paper className='dashboard-item-1' style={{ width: '98%', height: '440px', 'backgroundImage': 'url(https://cloud.githubusercontent.com/assets/2240017/19415323/2750276e-936d-11e6-8042-b65a065296d6.png)', 'backgroundSize': 'cover' }}>
       </Paper>
     </div>
