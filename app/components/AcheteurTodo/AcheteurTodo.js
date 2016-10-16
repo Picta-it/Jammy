@@ -7,7 +7,6 @@ import './AcheteurTodo.scss';
 
 class AcheteurTodo extends React.Component {
   static propTypes = {
-    fetching:     PropTypes.bool.isRequired,
     error:        PropTypes.string,
     response:     React.PropTypes.shape({
       todos:        PropTypes.string

@@ -1,8 +1,11 @@
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router'
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import SidebarMenu from '../../containers/AcheteurSidebarMenu';
 import MainTitleBar from '../../containers/MainTitleBar';
+import Badge from 'material-ui/Badge';
+import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
 import './CoreAcheteur.scss';
 import '../../styles/core.scss';
 
@@ -30,6 +33,11 @@ export class CoreAcheteur extends React.Component {
         <Header />
 
         <div className='page main-page'>
+          <Link to={`/acheteur/todo/`}>
+            <Badge className="acheteur-badge" badgeContent={4} primary={true}>
+              <NotificationsIcon />
+            </Badge>
+          </Link>
           {this.props.children}
         </div>
 

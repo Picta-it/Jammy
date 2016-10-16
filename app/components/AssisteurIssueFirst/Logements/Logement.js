@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import './AcheteurTask.scss';
+import './Logement/Logement.scss';
 
 
-class AcheteurTask extends React.Component {
+class Logement extends React.Component {
   static propTypes = {
     error:        PropTypes.string,
     onReservationClick: PropTypes.func.isRequired
@@ -26,12 +26,12 @@ class AcheteurTask extends React.Component {
       return item.id == self.props.params.id}
     )[0]
     var buys = [
-      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"68", "capacity":5, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":4, "etablissementIcon":"misterbnb", "type":"night", "name":"Mister BnB", "averagePrice":"68", "capacity":5, "description":"C'est trop de la balle Air BnB!!!"},
       {"etablissement":2, "etablissementIcon":"booking", "type":"night", "name":"Booking", "averagePrice":"70", "capacity":8, "description":"C'est trop de la balle Air BnB!!!"},
       {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"71", "capacity":4, "description":"C'est trop de la balle Air BnB!!!"},
-      {"etablissement":3, "etablissementIcon":"guesttoguest", "type":"night", "name":"Guest To Guest", "averagePrice":"50", "capacity":3, "description":"C'est trop de la balle Air BnB!!!"},
-      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
-      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":3, "etablissementIcon":"guesttoguest", "type":"night", "name":"Guest To Guest", "averagePrice":"75", "capacity":3, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"76", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
+      {"etablissement":5, "etablissementIcon":"gambing", "type":"night", "name":"Gambing", "averagePrice":"80", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
       {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
       {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
       {"etablissement":1, "etablissementIcon":"airbnb", "type":"night", "name":"Air BnB", "averagePrice":"50", "capacity":2, "description":"C'est trop de la balle Air BnB!!!"},
@@ -40,23 +40,25 @@ class AcheteurTask extends React.Component {
       ]
     var buyingList = buys.map(function(aBuy, index){
       return (
-        <Card key={index}>
-          <CardHeader
-            title={aBuy.name}
-            subtitle={"Prix moyen = "+aBuy.averagePrice+" €"}
-            avatar={require("./icons/"+aBuy.etablissementIcon+".png")}
-            actAsExpander={true}
-            showExpandableButton={true}
-          />
-          <CardActions>
-            <FlatButton label="Réserver" />
-            <FlatButton label="Ignorer" />
-          </CardActions>
-          <CardText expandable={true}>
-            Capacité : {aBuy.capacity}
-            <p>{aBuy.description}</p>
-          </CardText>
-        </Card>
+        <Badge className="acheteur-badge" badgeContent={index<2?"R":""} primary={true} key={index}>
+          <Card >
+            <CardHeader
+              title={aBuy.name}
+              subtitle={"Prix moyen = "+aBuy.averagePrice+" €"}
+              avatar={require("./icons/"+aBuy.etablissementIcon+".png")}
+              actAsExpander={true}
+              showExpandableButton={true}
+            />
+            <CardActions>
+              <FlatButton label="Réserver" />
+              <FlatButton label="Ignorer" />
+            </CardActions>
+            <CardText expandable={true}>
+              Capacité : {aBuy.capacity}
+              <p>{aBuy.description}</p>
+            </CardText>
+          </Card>
+        </Badge>
       )
     })
     return (
@@ -69,4 +71,4 @@ class AcheteurTask extends React.Component {
   }
 }
 
-export default AcheteurTask;
+export default Logement;
