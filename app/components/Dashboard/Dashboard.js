@@ -170,12 +170,17 @@ var priceConfig = {
   title: {
     text: 'Prix / nuitée'
   },
+  xAxis: {
+    type: 'datetime'
+  },
   series: [{
     name: 'Hébergement',
     data: priceData,
     tooltip: {
       valueDecimals: 2
-    }
+    },
+    pointStart: Date.UTC(2016, 6, 3),
+    pointInterval: 24 * 3600 * 1000 // one day
   }]
 };
 
@@ -186,18 +191,25 @@ var availabilityConfig = {
   title: {
     text: "Nombre d'hébergements"
   },
+  xAxis: {
+    type: 'datetime'
+  },
   series: [{
     name: 'Disponibilités',
     data: availabilityData,
     tooltip: {
       valueDecimals: 2
-    }
+    },
+    pointStart: Date.UTC(2016, 6, 3),
+    pointInterval: 24 * 3600 * 1000 // one day
   }, {
     name: 'Besoins',
     data: needsData,
     tooltip: {
       valueDecimals: 2
-    }
+    },
+    pointStart: Date.UTC(2016, 6, 3),
+    pointInterval: 24 * 3600 * 1000 // one day
   }]
 };
 
