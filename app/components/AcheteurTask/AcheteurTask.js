@@ -20,7 +20,7 @@ class AcheteurTask extends React.Component {
       {"id":1, "type":"night", "title":"Réservation chambres", "date":"01/12/2016", "description":"Barcelone pendant 3 jours"},
       {"id":2, "type":"night", "title":"Réservation chambres", "date":"04/12/2016", "description":"Paris pendant 1 jour"},
       {"id":3, "type":"night", "title":"Réservation chambres", "date":"15/12/2016", "description":"Bordeaux pendant 5 jours"},
-      {"id":4, "type":"car", "title":"Réservation voiture de location", "date":"26/12/2016", "description":"Bordeaux pendant 10 jours"}
+      {"id":4, "type":"night", "title":"Réservation voiture de location", "date":"26/12/2016", "description":"Bordeaux pendant 10 jours"}
       ]
     var task = tasks.filter(function(item) {
       return item.id == self.props.params.id}
@@ -44,10 +44,10 @@ class AcheteurTask extends React.Component {
           <CardHeader
             title={aBuy.name}
             subtitle={"Prix moyen = "+aBuy.averagePrice+" €"}
-            avatar={require("./icons/"+aBuy.etablissementIcon+".png")}
             actAsExpander={true}
-            showExpandableButton={true}
-          />
+            showExpandableButton={true}>
+            <img src={require("./icons/"+aBuy.etablissementIcon+".png")} className="icone2" />
+          </CardHeader>
           <CardActions>
             <FlatButton label="Réserver" />
             <FlatButton label="Ignorer" />
