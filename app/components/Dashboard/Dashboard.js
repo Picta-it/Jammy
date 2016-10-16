@@ -218,7 +218,7 @@ export const Dashboard = () => (
       </Paper>
     </div>
     <div style={{ display: 'block' }} className='right-column'>
-      <Paper className='dashboard-item-1' style={{ width: '98%', height: '440px', 'backgroundImage': 'url(https://cloud.githubusercontent.com/assets/2240017/19415323/2750276e-936d-11e6-8042-b65a065296d6.png)', 'backgroundSize': 'cover' }}>
+      <Paper className='dashboard-item-1' style={{ width: '98%', height: '440px', 'backgroundImage': 'url(http://i97.servimg.com/u/f97/13/55/72/03/carte_10.jpg)', 'backgroundSize': 'cover' }}>
       </Paper>
     </div>
   </div>
