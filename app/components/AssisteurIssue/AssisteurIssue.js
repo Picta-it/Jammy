@@ -60,7 +60,7 @@ export default class AssisteurIssue extends React.Component {
             <StepLabel>Saisie incident</StepLabel>
           </Step>
           <Step>
-            <StepLabel>Choix du logement</StepLabel>
+            <StepLabel>Choix de l'hébergement</StepLabel>
           </Step>
           <Step>
             <StepLabel>Choix du déplacement</StepLabel>
@@ -93,7 +93,7 @@ export default class AssisteurIssue extends React.Component {
                   primary
                   onTouchTap={this.handleNext}
                 />
-              <div style={{ textAlign: 'left' }}>
+              <div style={{ textAlign: 'left', marginTop: '15px' }}>
                 {this.getStepContent(stepIndex)}
               </div>
               </div>

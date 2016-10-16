@@ -111,14 +111,6 @@ h3 {
   padding: 10px;
 }
 
-.dashboard-item-1, .dashboard-item-4 {
-  height: 170px;
-}
-
-.dashboard-item-2, .dashboard-item-3 {
-  height: 230px;
-}
-
 .left-column {
   float: left;
   width: 49%;
@@ -141,4 +133,8 @@ h3.separator {
 
 .footer, .header {
   width: 100%;
+}
+
+.collaboratif {
+  background-color: #FBE9E7 !important;
 }

@@ -12,7 +12,7 @@ export default class AuthenticationModel extends ActiveRecordBasisModel {
     let randomDelay = Math.random() * 1500;
 
     let deferred = new Promise((resolve, reject) => {
-      if (this.username === 'management' && this.password === 'pouet') {
+      if (this.username === 'analyste' && this.password === 'pouet') {
         let fakeResult = {
           url: '/management/',
           data: {

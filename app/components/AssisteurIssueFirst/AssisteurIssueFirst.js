@@ -31,6 +31,7 @@ export default class AssisteurIssueFirst extends React.Component {
               onKeyPress={(event) => this.handleKeyPress(event)}
               name='nom-appelant'
               ref='nom-appelant'
+              value='Jacqueline Dupond'
             />
             <TextField
               className='issue-field half'
@@ -39,6 +40,7 @@ export default class AssisteurIssueFirst extends React.Component {
               onKeyPress={(event) => this.handleKeyPress(event)}
               name='telephone'
               ref='telephone'
+              value='06 06 06 06 06'
             />
             <h3 className='separator'>Nom conducteur</h3>
             <Divider />
@@ -49,6 +51,7 @@ export default class AssisteurIssueFirst extends React.Component {
               onKeyPress={(event) => this.handleKeyPress(event)}
               name='immat'
               ref='immat'
+              value='NF-756-NF'
             />
             <TextField
               className='issue-field half'
@@ -57,6 +60,7 @@ export default class AssisteurIssueFirst extends React.Component {
               onKeyPress={(event) => this.handleKeyPress(event)}
               name='nom-conducteur'
               ref='nom-conducteur'
+              value='Pierre Dupond'
             />
             <TextField
               className='issue-field full'
@@ -71,14 +75,14 @@ export default class AssisteurIssueFirst extends React.Component {
             <SelectField
               className='issue-field half'
             >
-              <MenuItem label='Produit' primaryText='...' />
-              <MenuItem label='Produit' primaryText='Garantie constructeur' />
+              <MenuItem label='Garantie constructeur' primaryText='...' />
+              <MenuItem label='Garantie constructeur' primaryText='Garantie constructeur' />
             </SelectField>
             <SelectField
               className='issue-field half'
             >
-              <MenuItem label='Formule' primaryText='...' />
-              <MenuItem label='Formule' primaryText='Garantie constructeur' />
+              <MenuItem label='Garantie constructeur' primaryText='...' />
+              <MenuItem label='Garantie constructeur' primaryText='Garantie constructeur' />
             </SelectField>
             <h3 className='separator'>Client d'IMA - Nature d'assistance</h3>
             <Divider />
