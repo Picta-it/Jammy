@@ -21,6 +21,10 @@ export default class MenuIconFactory {
         return <FontIcon className='fa fa-gears' hoverColor={deepOrangeA400} />;
       case 'issue':
         return <FontIcon className='fa fa-warning' hoverColor={deepOrangeA400} />;
+      case 'night':
+        return <FontIcon className='fa fa-bed' hoverColor={deepOrangeA400} />;
+      case 'car':
+        return <FontIcon className='fa fa-car' hoverColor={deepOrangeA400} />;
       case 'logout':
         return <FontIcon className='fa fa-sign-out' hoverColor={deepOrangeA400} />;
       default:
