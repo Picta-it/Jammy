@@ -1,7 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 const ReactHighcharts = require('react-highcharts');
-// var Highlight = require('react-highlight');
+var AmCharts = require('amcharts3-react');
 import './Dashboard.scss';
 
 var priceData = [
@@ -111,11 +111,11 @@ var availabilityData = [
 ].map((elm) => [elm[0], elm[1] / 8.2]);
 
 var needsData = [
-  ['2016-07-03', 604],
-  ['2016-07-04', 633],
-  ['2016-07-05', 644],
-  ['2016-07-06', 670],
-  ['2016-07-07', 705],
+  ['2016-07-03', 2604],
+  ['2016-07-04', 2633],
+  ['2016-07-05', 2644],
+  ['2016-07-06', 2670],
+  ['2016-07-07', 2705],
   ['2016-07-08', 2736],
   ['2016-07-09', 3800],
   ['2016-07-10', 3300],
@@ -213,12 +213,12 @@ export const Dashboard = () => (
         <ReactHighcharts config={availabilityConfig} />
       </Paper>
     </div>
-    <div className='right-column'>
-      <Paper className='dashboard-item-3'>
-        test
+    <div style={{ width: '100%', display: 'block' }}>
+      <Paper className='dashboard-item-1' style={{ width: '98%', height: '440px', 'backgroundImage': 'url(https://cloud.githubusercontent.com/assets/2240017/19415322/274cbc82-936d-11e6-88f2-e2b173bd7bd8.png)', 'backgroundSize': 'cover' }}>
       </Paper>
-      <Paper className='dashboard-item-4'>
-        test
+    </div>
+    <div style={{ width: '100%', display: 'block' }}>
+      <Paper className='dashboard-item-1' style={{ width: '98%', height: '440px', 'backgroundImage': 'url(https://cloud.githubusercontent.com/assets/2240017/19415323/2750276e-936d-11e6-8042-b65a065296d6.png)', 'backgroundSize': 'cover' }}>
       </Paper>
     </div>
   </div>
@@ -229,7 +229,7 @@ export default Dashboard;
 /*
     <div className='left-column'>
       <Paper className='dashboard-item-2' style={{ width: '98%', height: '240px' }}>
-        <img src={require("./img/heatmap.png")} style={{ width: '100%', height: '100%' }}/>
+        <img src={require('./img/heatmap.png')} style={{ width: '100%', height: '100%' }}/>
       </Paper>
     </div>
  */
