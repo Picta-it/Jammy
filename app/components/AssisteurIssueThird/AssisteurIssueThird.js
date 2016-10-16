@@ -51,11 +51,7 @@ export default class AssisteurIssueThird extends React.Component {
             </CardHeader>
             <CardActions>
               <FlatButton label='Réserver' />
-              <FlatButton label="Plus d'infos" />
             </CardActions>
-            <CardText expandable>
-              <p>{aBuy.description}</p>
-            </CardText>
           </Card>
         </Badge>
       );
